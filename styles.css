@@ -1,147 +1,214 @@
-body {
-    font-family: 'Roboto', sans-serif;
+/* Configuración básica de la página */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Establecer la imagen de fondo para todo el body */
 body {
-    background-image: url('https://www.drive.google.com/uc?export=view&id=1_tsmjAc1Brc23dOfIJwTF-5gx4SQOazr');
-    background-size: cover;  /* Hace que la imagen cubra todo el espacio */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Hace que la imagen permanezca fija al hacer scroll */
-    height: 80vh; /* Asegura que el fondo cubra toda la altura de la ventana */
-    color: rgb(27, 27, 27);  /* Cambia el color del texto para que sea visible sobre el fondo */
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 80px; /* Espacio para el header fijo */
 }
 
-/* Estilos para el header */
+/* Encabezado */
 header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo translúcido */
+    color: rgb(7, 7, 7);
     text-align: center;
-    padding: 50px;
+    padding: 20px 0;
+    z-index: 100; /* Asegura que el header esté encima del contenido */
 }
 
-/* Estilos para el contenido */
-main {
-    padding: 20px;
-    text-align: center;
+header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
 }
 
+header .header-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px ;
+    max-height: 120px;
+    filter: brightness(80%); /* Baja el brillo de la imagen */
+}
 
-
+nav ul {
+    display: flex;
+    justify-content:center;
+    list-style-type: none;
+    padding: 30px 0;
+}
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #471cbd;
+nav a {
+    color: rgb(197, 21, 21);
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #1ddb1d; /* Color de resaltado */
+}
+
+/* Secciones principales */
 main {
-    padding: 2rem;
+    padding: 40px;
 }
 
+/* Estilos para las secciones */
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
+    padding: 20px 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
 }
 
-.card-container {
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align:start;
+    color: #333;
+}
+
+/* Sección de productos con Flexbox */
+.flex-container {
     display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
+    justify-content:center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.card {
-    background-color: #cfdfd0;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    flex: 1 1 calc(33.333% - 2rem);
+.flex-item {
+    background-color: #bd8cac; /* Color de fondo tipo pizza */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas responsivas */
+    text-align: center;
+    font-size: 2rem;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
 
+.flex-item:hover {
+    transform: scale(1.05);
+}
+
+/* Sección de reseñas con Grid */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsivo */
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .grid-item {
-    background-color: #f4f4f4;
-    padding: 1rem;
-    border: 1px solid #ddd;
+    background-color: #f39c12;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+/* Formulario de contacto */
 form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-form label {
-    font-weight: bold;
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
-form input, form textarea {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+form input:focus,
+form textarea:focus {
+    border-color: #ff6347; /* Color de enfoque */
 }
 
 form button {
-    padding: 0.5rem;
-    background-color: #67ac26;
-    color: #fff;
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 2rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #d85a2f;
 }
 
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
 }
-/* Definir el contenedor como un Flexbox */
-.flex-container {
-    display: flex;                /* Hace que el contenedor sea un Flexbox */
-    justify-content: space-around; /* Distribuye los elementos con espacio alrededor */
-    align-items: center;          /* Alinea los elementos verticalmente al centro */
-    height: 16vh;                /* Usa toda la altura de la ventana del navegador */
-    background-color: #f0f0f0;    /* Fondo gris claro para el contenedor */
-  }
-  
-  /* Estilos para los elementos flexibles */
-  .flex-item {
-    width: 280px;                 /* Ancho fijo para cada elemento */
-    height: 95px;                /* Alto fijo para cada elemento */
-    display: flex;                /* Hace que los elementos flexibles sean flexibles también */
-    justify-content: center;      /* Centra el contenido de cada elemento */
-    align-items: center;          /* Centra el contenido verticalmente */
-    background-color: #3498db;    /* Fondo azul para cada elemento */
-    color: rgba(248, 248, 245, 0.89);                 /* Texto en blanco */
-    font-size: 26px;              /* Tamaño de la fuente */
-    border-radius: 14px;          /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.87); /* Sombra sutil */
-    text-align: center;           /* Alineación del texto en el centro */
-  }
-  
-  /* Colores diferentes para cada elemento */
-  .item1 { background-color: #e74c3c; }
-  .item2 { background-color: #f39c12; }
-  .item3 { background-color: #2ecc71; }
-  .item4 { background-color: #882272; }
-  .item5 { background-color: #f39c12; }
-  .item6 { background-color: #c9cc2e; }
-  
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        flex: 1 1 60%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
 
 
 

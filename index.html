@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Napoli pizzas</title>
+    <title>Napoli Pizzas</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="https://drive.google.com/uc?export=view&id=1_tsmjAc1Brc23dOfIJwTF-5gx4SQOazr" alt="Imagen del encabezado" class="header-img">
-        <h1>Napoli pizzas</h1>
+        <img src="https://i.imgur.com/sdcKDxG.jpeg" alt="Imagen del encabezado" class="header-img">                
+        <h1>Napoli Pizzas</h1>
             <nav>
                 <ul>
                      <li><a href="#inicio">Inicio</a></li>
@@ -23,7 +23,6 @@
     <main>
         <section id="inicio">
             <h2>Bienvenidos</h2>
-            <p>Descripción de la página.</p>
         </section>
         <section id="productos">
             <h2>Productos</h2>
@@ -53,8 +52,10 @@
 
             <form
 
-                action="https://formspree.io/f/xjkvrjbz"
-                method="POST"
+            action="https://formspree.io/f/xjkvrjbz"
+            method="POST"
+            id="contact-form"
+            onsubmit="return clearFields()"
             >
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre">
@@ -64,6 +65,26 @@
                 <textarea id="mensaje" name="mensaje"></textarea>
                 <button type="submit">Enviar</button>
             </form>
+            <script>
+                // Función para limpiar los campos después de enviar el formulario
+                function clearFields() {
+                    // Validar si los campos están llenos
+                    const nombre = document.getElementById('nombre').value;
+                    const email = document.getElementById('email').value;
+                    const mensaje = document.getElementById('mensaje').value;
+                    
+                    if (nombre && email && mensaje) {
+                        // Borra los valores de los campos después del envío si los campos no están vacíos
+                        setTimeout(function() {
+                            document.getElementById('nombre').value = '';
+                            document.getElementById('email').value = '';
+                            document.getElementById('mensaje').value = '';
+                        }, 500); // Espera medio segundo antes de borrar los campos
+                    }
+            
+                    return true;  // Asegura que el formulario se envíe correctamente
+                }
+            </script>
         </section>
     </main>
     <footer>
