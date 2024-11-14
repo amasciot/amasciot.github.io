@@ -1,0 +1,147 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecer la imagen de fondo para todo el body */
+body {
+    background-image: url('https://www.drive.google.com/uc?export=view&id=1_tsmjAc1Brc23dOfIJwTF-5gx4SQOazr');
+    background-size: cover;  /* Hace que la imagen cubra todo el espacio */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen permanezca fija al hacer scroll */
+    height: 80vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    color: rgb(27, 27, 27);  /* Cambia el color del texto para que sea visible sobre el fondo */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el header */
+header {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Estilos para el contenido */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #471cbd;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.card-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #cfdfd0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.5rem;
+    background-color: #67ac26;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+/* Definir el contenedor como un Flexbox */
+.flex-container {
+    display: flex;                /* Hace que el contenedor sea un Flexbox */
+    justify-content: space-around; /* Distribuye los elementos con espacio alrededor */
+    align-items: center;          /* Alinea los elementos verticalmente al centro */
+    height: 16vh;                /* Usa toda la altura de la ventana del navegador */
+    background-color: #f0f0f0;    /* Fondo gris claro para el contenedor */
+  }
+  
+  /* Estilos para los elementos flexibles */
+  .flex-item {
+    width: 280px;                 /* Ancho fijo para cada elemento */
+    height: 95px;                /* Alto fijo para cada elemento */
+    display: flex;                /* Hace que los elementos flexibles sean flexibles también */
+    justify-content: center;      /* Centra el contenido de cada elemento */
+    align-items: center;          /* Centra el contenido verticalmente */
+    background-color: #3498db;    /* Fondo azul para cada elemento */
+    color: rgba(248, 248, 245, 0.89);                 /* Texto en blanco */
+    font-size: 26px;              /* Tamaño de la fuente */
+    border-radius: 14px;          /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.87); /* Sombra sutil */
+    text-align: center;           /* Alineación del texto en el centro */
+  }
+  
+  /* Colores diferentes para cada elemento */
+  .item1 { background-color: #e74c3c; }
+  .item2 { background-color: #f39c12; }
+  .item3 { background-color: #2ecc71; }
+  .item4 { background-color: #882272; }
+  .item5 { background-color: #f39c12; }
+  .item6 { background-color: #c9cc2e; }
+  
+
+
+
